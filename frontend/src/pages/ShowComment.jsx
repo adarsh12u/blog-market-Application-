@@ -23,8 +23,8 @@ const ShowComment = ({ postId }) => {
   if (!user) {
     return (
       <div>
-        <h1 className=" text-4xl">
-          you are not allow to comment in this post , firstly you have to login
+        <h1 className="text-lg md:text-4xl">
+          you are not allow to see comment , firstly you have to login
         </h1>
       </div>
     );
