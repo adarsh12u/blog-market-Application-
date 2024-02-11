@@ -34,14 +34,19 @@ const App = () => {
 const router  = createBrowserRouter([{
      path:'/',
      element:<Home/>,
-     children:[{
+     children:[
+      {
+       index:true,
+        element:<MyHome/>
+      },
+      {
           path:'/dashboard',
           element: user ? <Dashboard/> : <Login/> ,
           
      },
      {
          path:'/create-post',
-         element: user && user.isAdmin ? <CreatePost/> : <Home/>
+         element: user && user.isAdmin ? <CreatePost/> : <MyHome/>
      },
      {
         path:'/search',
@@ -49,7 +54,7 @@ const router  = createBrowserRouter([{
      },
      {
       path:'/update-post/:id',
-      element: user && user.isAdmin ? <UpdatePost/> : <Home/>
+      element: user && user.isAdmin ? <UpdatePost/> : <MyHome/>
   },
   {
    path:'/post/:slug',
@@ -59,10 +64,7 @@ const router  = createBrowserRouter([{
     path:'/about',
     element:<About/>
     },
-    {
-      path:'/home',
-      element:<MyHome/>
-    },
+   
       {
  path:'/login',
  element:<Login/>
