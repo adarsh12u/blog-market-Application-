@@ -12,7 +12,7 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect('mongodb+srv://adarsh12:adarsh@minorproject2.kkhsymn.mongodb.net/test?retryWrites=true&w=majority')
   .then(() => {
     console.log('MongoDb is connected');
   })
@@ -26,7 +26,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: `${window.location.origin}`, // Replace with your frontend's URL
+   // Replace with your frontend's URL
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Specify the HTTP methods you want to allow
   credentials: true,
 }))

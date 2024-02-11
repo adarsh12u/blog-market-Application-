@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
+    "start": "node api/server.js",
     "build" : "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
