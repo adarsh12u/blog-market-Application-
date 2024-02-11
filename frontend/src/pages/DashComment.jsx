@@ -78,7 +78,7 @@ const DashComment = () => {
     <div
       className={` table-auto overflow-x-scroll md:mx-auto p-3 scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300 `}
     >
-      {user.isAdmin && usercomments.length > 0 && post ? (
+      {user.isAdmin && usercomments.length > 0 && post && post.length > 0  ? (
         <>
           <Table hoverable className="shadow-md">
             <Table.Head className=" bg-gray-500">
