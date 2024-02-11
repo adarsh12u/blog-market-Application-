@@ -12,7 +12,7 @@ import path from 'path';
 dotenv.config();
 
 mongoose
-  .connect('mongodb+srv://adarsh12:adarsh@minorproject2.kkhsymn.mongodb.net/test?retryWrites=true&w=majority')
+  .connect(process.env.MONGO)
   .then(() => {
     console.log('MongoDb is connected');
   })

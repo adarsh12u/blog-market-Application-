@@ -44,7 +44,7 @@ if(isLoading){
         <div className='w-full md:w-[60vw] mx-auto  flex flex-wrap gap-10 justify-center  mt-7 '>
         {
        
-       data.posts &&  data.posts.length > 0 ?  data.posts.map((value)=>{
+      data  &&  data.posts.length > 0 ?  data.posts.map((value)=>{
         const image = value.file.includes('pdf') ? "https://www.iconpacks.net/icons/2/free-pdf-file-icon-3382-thumb.png":value.file
                  return   <Card className="max-w-sm" key={value._id}>
                 <img src={image} className=' h-64 object-contain' alt="" />
