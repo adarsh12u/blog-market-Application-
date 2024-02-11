@@ -63,17 +63,9 @@ export const signin = async (req, res, next) => {
     }
     const token = jwt.sign(
       { id: validUser._id, isAdmin: validUser.isAdmin },
-      process.env.JWT_SECRET
+      'adarsh12123'
     );
-    const updatedUser = await User.findByIdAndUpdate(
-      validUser._id,
-      {
-        $set: {
-          token
-        },
-      },
-      
-    );
+  
     const { password: pass, ...rest } = validUser._doc;
 
     res
