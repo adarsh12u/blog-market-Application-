@@ -14,12 +14,11 @@ import {
 } from 'firebase/storage';
 import { app } from '../firebase';
 import { useEffect, useState } from 'react';
-
+import {useParams} from 'react-router-dom'
 import { toast } from "react-toastify";
 
 const  UpdatePost = ()  => {
-  const {id} = useParams();
-
+  const {id} =  useParams();
 
   
   const [file, setFile] = useState(null);
