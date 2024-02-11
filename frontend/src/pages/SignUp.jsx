@@ -26,6 +26,7 @@ const SignUp = () => {
                        setName("");
                        setEmail("");
                        setPassword("");
+                       navigate('/login')
                        
            }).catch((err)=>{
               console.log(err)

@@ -64,12 +64,12 @@ const router  = createBrowserRouter([{
       element:<MyHome/>
     },
       {
- path:'login',
+ path:'/login',
  element:<Login/>
     }
     ,
     {
-      path:'sign-up',
+      path:'/sign-up',
       element:<SignUp/>
            
     },{
