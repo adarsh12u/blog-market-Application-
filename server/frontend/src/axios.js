@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const customurl ='http://localhost:3000/api/'
+export const customurl =`${window.location.origin}/api/`
 
 
 
