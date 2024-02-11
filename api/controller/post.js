@@ -1,4 +1,5 @@
 import Post from '../modals/post.js';
+import Comment from '../modals/comment.js';
 import { errorHandler } from '../utils/error.js';
 
 export const getitem =async (req,res,next)=>{
@@ -84,6 +85,7 @@ export const deletepost = async (req, res, next) => {
  
   try {
     await Post.findByIdAndDelete(req.params.postId);
+    await Comment.deleteMany({postId : req.params.postId})
     res.status(200).json('The post has been deleted');
   } catch (error) {
     next(error);
