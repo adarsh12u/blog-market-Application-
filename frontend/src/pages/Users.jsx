@@ -104,7 +104,7 @@ const Users = () => {
                       <h1>{post.email}</h1>
                     </Table.Cell>
                     <Table.Cell>
-                      {post.isAdmin ? <FaTimes /> : <FaCheck />}
+                      {post.isAdmin ? <FaCheck /> : <FaTimes />}
                     </Table.Cell>
                     <Table.Cell>
                       <button
