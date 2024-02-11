@@ -6,7 +6,6 @@ import authRoutes from './routes/auth.js';
 import postRoutes from './routes/post.js';
 import commentRoutes from './routes/comment.js';
 import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
 import cors from 'cors'
 import path from 'path';
 
@@ -21,7 +20,7 @@ mongoose
     console.log(err);
   });
 
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -44,11 +43,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes);
 
-// app.use(express.static(path.join(__dirname, '/client/dist')));
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+});
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
