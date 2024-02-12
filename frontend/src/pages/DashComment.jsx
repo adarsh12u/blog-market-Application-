@@ -66,7 +66,7 @@ const DashComment = () => {
       });
   };
 
-  if (isLoading ) {
+  if (isLoading || !post ) {
     return (
       <div className="flex justify-center items-center min-h-screen">
         <Spinner size={"xl"} />
