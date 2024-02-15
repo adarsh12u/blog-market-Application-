@@ -1,13 +1,11 @@
-import { Spinner, TextInput } from "flowbite-react";
+
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
 import { useSelector } from "react-redux";
-import { BsFillSendFill } from "react-icons/bs";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import {  useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { customurl } from "../axios";
-import { toast } from "react-toastify";
 import Comment from "./Comment";
+
 const ShowComment = ({ postId }) => {
   const [showcomments, setshowcommetnts] = useState(false);
   const { data, isLoading } = useQuery({

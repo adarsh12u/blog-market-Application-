@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { customurl } from '../axios';
 import {Viewer , Worker} from '@react-pdf-viewer/core'
@@ -9,8 +9,8 @@ import '@react-pdf-viewer/core/lib/styles/index.css'
 import '@react-pdf-viewer/default-layout/lib/styles/index.css'
 import { ImCross } from "react-icons/im";
 import { Button, Spinner } from 'flowbite-react';
-import Commentcreate from './Commentcreate';
-import ShowComment from './ShowComment';
+import Commentcreate from '../Comments/Commentcreate';
+import ShowComment from '../Comments/ShowComment';
 const PostSeen = () => {
   const {slug} = useParams();
   const {data , isLoading} = useQuery({

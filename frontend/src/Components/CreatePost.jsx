@@ -12,11 +12,8 @@ import {
   ref,
   uploadBytesResumable,
 } from 'firebase/storage';
-import { app } from '../firebase';
 import { useState } from 'react';
-// import { CircularProgressbar } from 'react-circular-progressbar';
-
-import { useNavigate } from 'react-router-dom';
+import {app} from '../firebase'
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
@@ -28,7 +25,7 @@ const  CreatePost = ()  => {
   const [formData, setFormData] = useState({});
   const [publishError, setPublishError] = useState(null);
 
-  const navigate = useNavigate();
+  
 
   const handleUpdloadImage = async () => {
     try {
@@ -61,6 +58,7 @@ const  CreatePost = ()  => {
         }
       );
     } catch (error) {
+      console.log(error);
       setFileUploadError('Image upload failed');
       setFileUploadProgress(null);
       console.log(error);

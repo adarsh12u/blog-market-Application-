@@ -102,7 +102,7 @@ export const updatepost = async (req, res, next) => {
           title: req.body.formData.title,
           content: req.body.formData.content,
           category: req.body.formData.category,
-          image: req.body.formData.image,
+          file: req.body.formData.file,
         },
       },
       { new: true }

@@ -6,7 +6,7 @@ import {
   HiDocumentText,
   HiOutlineUserGroup,
 } from 'react-icons/hi';
-import { Button, Table } from 'flowbite-react';
+import { Table } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { customurl } from '../axios';

@@ -8,13 +8,13 @@ import {
   HiChartPie,
 } from 'react-icons/hi';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-// import { signoutSuccess  } from '../redux/user/userSlice';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signsucess } from '../user/userslice';
 import { useSelector } from 'react-redux';
 
 const DashSidebar = ()=> {
+  const navigate = useNavigate()
   const location = useLocation();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
@@ -36,6 +36,7 @@ const DashSidebar = ()=> {
         console.log(data.message);
       } else {
         dispatch(signsucess());
+        navigate('/login')
       }
     } catch (error) {
       console.log(error.message);

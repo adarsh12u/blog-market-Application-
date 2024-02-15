@@ -12,11 +12,11 @@ import {
   ref,
   uploadBytesResumable,
 } from 'firebase/storage';
-import { app } from '../firebase';
 import { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom'
 import { toast } from "react-toastify";
 
+import {app} from '../firebase'
 const  UpdatePost = ()  => {
   const {id} =  useParams();
 

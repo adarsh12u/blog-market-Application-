@@ -1,9 +1,8 @@
-import { TextInput } from 'flowbite-react'
+
 import React, { useState } from 'react'
-import ReactQuill from 'react-quill'
 import { useSelector } from 'react-redux'
 import { BsFillSendFill } from "react-icons/bs";
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useMutation,  useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { customurl } from '../axios';
 import { toast } from 'react-toastify';

@@ -4,11 +4,9 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import {Link, useNavigate} from "react-router-dom" 
 import axios from "axios";
 import {toast} from 'react-toastify'
-import { Button } from "flowbite-react";
 import { customurl } from "../axios";
 import { useDispatch, useSelector } from "react-redux";
 import { signinerror, signprocess, signsucess } from "../user/userslice";
-import Oauth from "./Oauth";
 
 const Login = () => {
 const {loading} =  useSelector((state)=>state.user);

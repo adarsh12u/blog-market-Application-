@@ -3,11 +3,10 @@ import { customurl } from '../axios'
 import axios from 'axios'
 import moment from 'moment';import { CiHeart } from "react-icons/ci";
 import { useSelector } from 'react-redux';
-import { QueryClient, useMutation, useQueryClient } from '@tanstack/react-query';
+import {  useMutation, useQueryClient } from '@tanstack/react-query';
 import { FaHeart } from "react-icons/fa6";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import { toast } from 'react-toastify';
-const Comment = ({comment ,setshowcommetnts}) => {
+const Comment = ({comment }) => {
  const [data , setdata] = useState('')
 
  const {user} = useSelector((state)=>state.user);

@@ -4,7 +4,6 @@ import { SiLeetcode } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import { Footer } from 'flowbite-react';
 import { FaLinkedin } from "react-icons/fa";
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import React from 'react'
 
 const Footers = () => {

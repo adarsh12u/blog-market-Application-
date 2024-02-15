@@ -1,7 +1,7 @@
 import { section } from '../data'
 import { RiMenu3Line } from "react-icons/ri";
 import React, { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link,  useNavigate } from 'react-router-dom';
 import { Button, TextInput } from 'flowbite-react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useSelector } from 'react-redux';

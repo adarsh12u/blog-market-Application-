@@ -2,7 +2,6 @@ import React from "react";
 import { Modal, Table, Button, Spinner } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
 import axios from "axios";
 import { customurl } from "../axios";

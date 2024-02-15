@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import Login from './Login'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
 
 import axios from "axios"
-import { Button } from 'flowbite-react';
 import { customurl } from '../axios';
 import { toast } from 'react-toastify';
-import Oauth from './Oauth';
-// import { toast } from 'react-toastify';
+
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
