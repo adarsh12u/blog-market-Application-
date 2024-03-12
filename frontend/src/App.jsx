@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import { useSelector } from 'react-redux'
 import About from './pages/About'
 import Dashboard from './Dashboard/Dashboard'
 import Login from './NavPages/Login'
 import Home from './pages/Home'
-import SignUp from './NavPages/SignUp'
+const SignUp = React.lazy(()=>import('./NavPages/SignUp')) 
 import MyHome from './pages/MyHome'
-import { useSelector } from 'react-redux'
-
 import Contact from './pages/Contact'
 import CreatePost from './Components/CreatePost'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
 import UpdatePost from './Components/UpdatePost'
 import PostSeen from './Components/PostSeen'
 import SearchPage from './Components/SearchPage'
@@ -73,7 +72,7 @@ const router  = createBrowserRouter([{
     ,
     {
       path:'/sign-up',
-      element:<SignUp/>
+      element: <Suspense fallback = {<div>Loading..</div>}> <SignUp/> </Suspense>
            
     },{
       path:'/contact-us',

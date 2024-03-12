@@ -10,7 +10,6 @@ import { signinerror, signprocess, signsucess } from "../user/userslice";
 
 const Login = () => {
 const {loading} =  useSelector((state)=>state.user);
-const [ Loading  , setLoading] = useState(loading)
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

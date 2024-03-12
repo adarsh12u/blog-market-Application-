@@ -216,8 +216,8 @@ const  UpdatePost = ()  => {
           className='h-72 mb-12'
           required
           value={formData.content}
-          onChange={(value) => {
-            setFormData({ ...formData, content: value });
+          onChange={(e) => {
+            setFormData({ ...formData, content: e.target.value });
           }}
         />
         <Button type='submit'  color="dark">
