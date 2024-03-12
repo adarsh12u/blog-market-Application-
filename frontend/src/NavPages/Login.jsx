@@ -24,7 +24,7 @@ const navigate = useNavigate();
      ).then((res)=>{
 
           dispatch(signsucess(res.data))
-          navigate("/")
+          navigate("/about")
           toast.success("login sucessfull")
           // window.location.reload(true)
      }).catch((err)=>{
