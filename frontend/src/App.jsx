@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import MyHome from './pages/MyHome'
 
 import PostSeen from './Components/PostSeen'
+import { Spinner } from 'flowbite-react'
 const UpdatePost = React.lazy(()=>import('./Components/UpdatePost'))
 const About = React.lazy(()=>import('./pages/About'))
 const Dashboard = React.lazy(()=>import('./Dashboard/Dashboard'))
