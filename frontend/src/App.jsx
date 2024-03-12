@@ -42,12 +42,24 @@ const router  = createBrowserRouter([{
       },
       {
           path:'/dashboard',
-          element: user ? <Suspense fallback = {<div>Loading..</div>}><Dashboard/> </Suspense>   :<Suspense fallback = {<div>Loading..</div>}><Login/></Suspense>  ,
+          element: user ? <Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+          <Spinner size={'xl'}/>
+  
+         </div>}><Dashboard/> </Suspense>   :<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+   <Spinner size={'xl'}/>
+
+  </div>}><Login/></Suspense>  ,
           
      },
      {
          path:'/create-post',
-         element: user && user.isAdmin ?<Suspense fallback = {<div>Loading..</div>}><CreatePost/></Suspense>  : <MyHome/>
+         element: user && user.isAdmin ?<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+         <Spinner size={'xl'}/>
+ 
+        </div>}><CreatePost/></Suspense>  : <MyHome/>
      },
      {
         path:'/search',
@@ -55,7 +67,11 @@ const router  = createBrowserRouter([{
      },
      {
       path:'/update-post/:id',
-      element: user && user.isAdmin ?<Suspense fallback = {<div>Loading..</div>}><UpdatePost/></Suspense>  : <MyHome/>
+      element: user && user.isAdmin ?<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+      <Spinner size={'xl'}/>
+
+     </div>}><UpdatePost/></Suspense>  : <MyHome/>
   },
   {
    path:'/post/:slug',
@@ -63,21 +79,37 @@ const router  = createBrowserRouter([{
   },
     {
     path:'/about',
-    element:<Suspense fallback = {<div>Loading..</div>}><About/></Suspense>
+    element:<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+    <Spinner size={'xl'}/>
+
+   </div>}><About/></Suspense>
     },
    
       {
  path:'/login',
- element:<Suspense fallback = {<div>Loading..</div>}><Login/></Suspense>
+ element:<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+ <Spinner size={'xl'}/>
+
+</div>}><Login/></Suspense>
     }
     ,
     {
       path:'/sign-up',
-      element: <Suspense fallback = {<div>Loading..</div>}> <SignUp/> </Suspense>
+      element: <Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+      <Spinner size={'xl'}/>
+
+     </div>}> <SignUp/> </Suspense>
            
     },{
       path:'/contact-us',
-      element:<Suspense fallback = {<div>Loading..</div>}><Contact/></Suspense>
+      element:<Suspense fallback = {<div className='flex justify-center items-center min-h-screen'>
+   
+      <Spinner size={'xl'}/>
+
+     </div>}><Contact/></Suspense>
     }]
 }])
 
