@@ -5,8 +5,9 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
 import { useSelector } from 'react-redux'
 import Home from './pages/Home'
 import MyHome from './pages/MyHome'
-import UpdatePost from './Components/UpdatePost'
+
 import PostSeen from './Components/PostSeen'
+const UpdatePost = React.lazy(()=>import('./Components/UpdatePost'))
 const About = React.lazy(()=>import('./pages/About'))
 const Dashboard = React.lazy(()=>import('./Dashboard/Dashboard'))
 const Login = React.lazy(()=>import('./NavPages/Login')) 
@@ -41,7 +42,7 @@ const router  = createBrowserRouter([{
       },
       {
           path:'/dashboard',
-          element: user ? <Dashboard/> :<Suspense fallback = {<div>Loading..</div>}><Login/></Suspense>  ,
+          element: user ? <Suspense fallback = {<div>Loading..</div>}><Dashboard/> </Suspense>   :<Suspense fallback = {<div>Loading..</div>}><Login/></Suspense>  ,
           
      },
      {
