@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import Home from './pages/Home'
 import MyHome from './pages/MyHome'
 
-import PostSeen from './Components/PostSeen'
+const PostSeen = React.lazy(()=>import('./Components/PostSeen'))
 import { Spinner } from 'flowbite-react'
 const UpdatePost = React.lazy(()=>import('./Components/UpdatePost'))
 const About = React.lazy(()=>import('./pages/About'))
